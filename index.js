@@ -14,6 +14,8 @@ const reactBuildPath = path.join(__dirname + '/client/build/index.html')
 // Static React Routing
 app.use(express.static(path.join(__dirname, '/client/build')))
 app.get('/', (_, res) => { res.sendFile(reactBuildPath); })
+app.get('/filter/*', (_, res) => { res.sendFile(reactBuildPath); })
+
 
 // Backend calls under /server/routes/index
 const routes = require('./server/api/index');

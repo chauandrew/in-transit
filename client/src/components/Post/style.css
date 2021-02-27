@@ -6,3 +6,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.post-tag {
+    margin-right: 3px;
+    text-decoration: none;
+}

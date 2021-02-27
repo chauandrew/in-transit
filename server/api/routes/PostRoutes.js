@@ -1,17 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const gsheetService = require('../../services/GsheetService')
+const postService = require('../../services/PostService')
 
-router.get('/', (_, res) => {
-    gsheetService.getRows("Posts")
+router.get('/', (req, res) => {
+    postService.getPosts(req.query.q)
         .then((rows) => {
-        res.send(rows)
-    })
+            res.send(rows)
+        })
         .catch((err) => {
             res.status(400)
             res.send(err)
         })
-
 })
 
 module.exports = router;
