@@ -1,0 +1,12 @@
+{
+  "Posts": {
+    "sheetId": 934823691,
+    "spreadsheetId": "1sAaTL0J9-g2fl3Qc_D1zIhULo8JMILKD7T6Tuj6tmj8",
+    "columns": ["author", "body", "createdDate", "tags", "imgUrls"]
+  },
+  "testing": {
+    "sheetId": 0,
+    "spreadsheetId": "1sAaTL0J9-g2fl3Qc_D1zIhULo8JMILKD7T6Tuj6tmj8",
+    "columns": ["Key", "Value"]
+  }
+}
