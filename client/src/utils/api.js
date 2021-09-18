@@ -3,7 +3,7 @@ import axios from 'axios';
 var prefix="https://humans-of-boston.herokuapp.com"
 // prefix = "http://localhost:4000" // uncomment for local testing
 
-export default {
+const api = {
     getRecentPosts: async () => {
         let url = prefix + "/api/v1/post"
         let posts = (await axios.get(url)).data
@@ -12,7 +12,7 @@ export default {
         posts.rows.reverse()
         return posts
     },
-
+    
     /**
      * 
      * @param {String} tags comma delimited string
@@ -25,3 +25,5 @@ export default {
         return posts
     }
 }
+
+export default api;

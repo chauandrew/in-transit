@@ -30,7 +30,7 @@ const FilteredPosts = () => {
                 }
                 setPosts(p)
             })
-    }, [])
+    }, [tags])
 
     return (
         <Container>
