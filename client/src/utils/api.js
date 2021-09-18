@@ -1,13 +1,14 @@
 import axios from 'axios';
 
-var prefix="https://advance-x.herokuapp.com"
+var prefix="https://humans-of-boston.herokuapp.com"
 // prefix = "http://localhost:4000" // uncomment for local testing
 
 export default {
     getRecentPosts: async () => {
         let url = prefix + "/api/v1/post"
         let posts = (await axios.get(url)).data
-        posts.rows = posts.rows.slice(-3)
+        let numPosts = 6
+        posts.rows = posts.rows.slice(-numPosts)
         posts.rows.reverse()
         return posts
     },

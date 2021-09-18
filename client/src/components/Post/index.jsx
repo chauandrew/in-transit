@@ -15,11 +15,11 @@ const Post = ({author, bodyText, date, imgUrls, tags}) => {
         )
     }
     return (
-        <Col sm={12} md={6} xl={4}>
+        <Col sm={12} md={6} lg={4}>
             <img src={imgUrls[0]} className="post-img" />
             <p>{bodyText}</p>
             <h6>{author}</h6>
-            <p>{date}</p>
+            {/* <p>{date}</p> */}
             <p>{tagBadges}</p>
         </Col>
     )

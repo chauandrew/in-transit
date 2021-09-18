@@ -32,7 +32,7 @@ const RecentPosts = () => {
         <Container>
             <Row>
                 <Col lg={12} className="text-center">
-                    <h2>RECENT STORIES</h2>
+                    <h2>Recent Stories:</h2>
                 </Col>
             </Row>
             <Row>

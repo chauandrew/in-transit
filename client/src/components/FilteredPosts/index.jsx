@@ -36,7 +36,7 @@ const FilteredPosts = () => {
         <Container>
             <Row>
                 <Col lg={12} className="text-center">
-                    <h2>FILTERED STORIES</h2>
+                    <h2>{tags} Stories:</h2>
                 </Col>
             </Row>
             <Row>

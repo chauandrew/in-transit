@@ -11,10 +11,11 @@ function App() {
         <Container>
           <Row>
             <Col className="text-center">
-              <h1>Advance X</h1>
+              <h1>Humans Of Boston</h1>
               <p>
-                Check out these stories from ADVANCE-X volunteering around the
-                nation!
+                A photojournalism project of college students across Boston.
+                Inspired by <a target="blank" href="https://www.humansofnewyork.com/">Humans of New York</a>.
+                Managed by <a target="blank" href="https://www.instagram.com/gracepoint.boston/">Gracepoint Boston</a>.
               </p>
             </Col>
           </Row>
