@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-var prefix="https://humans-of-boston.herokuapp.com"
+var prefix="https://stories-and-strangers.herokuapp.com"
 // prefix = "http://localhost:4000" // uncomment for local testing
 
 const api = {
