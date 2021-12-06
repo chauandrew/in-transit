@@ -11,11 +11,9 @@ function App() {
         <Container>
           <Row>
             <Col className="text-center">
-              <h1>Humans</h1>
+              <h1>Stories And Strangers</h1>
               <p>
-                My personal blog / photojournalism project!
-                Inspired by <a target="blank" href="https://www.humansofnewyork.com/">Humans of New York</a>.
-                {/* Managed by <a target="blank" href="https://www.instagram.com/gracepoint.boston/">Gracepoint Boston</a>. */}
+                Hi, my name's Andrew, and this is a passion project of mine. Everyone's got a story, and this is my excuse to meet new people and hear about their experiences and perspectives. 
               </p>
             </Col>
           </Row>
