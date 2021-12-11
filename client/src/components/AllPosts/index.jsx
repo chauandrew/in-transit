@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap'
 import Post from '../Post'
 import api from '../../utils/api'
 
@@ -7,7 +7,7 @@ const RecentPosts = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        api.getRecentPosts()
+        api.getAllPosts()
             .then((res) => {
                 console.log(res)
                 let p = []
@@ -30,18 +30,8 @@ const RecentPosts = () => {
 
     return (
         <Container>
-            <Row className="m-3">
-                <Col lg={12} className="text-center">
-                    <h2>Recent Stories:</h2>
-                </Col>
-            </Row>
             <Row>
                 {posts}
-            </Row>
-            <Row className="m-3">
-                <Col lg={12} className="text-center">
-                    <a href="/all">View More Stories</a>
-                </Col>
             </Row>
         </Container>
     )

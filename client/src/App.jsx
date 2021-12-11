@@ -21,6 +21,7 @@ function App() {
 
         <Switch>
           <Route exact path="/" component={Components.RecentPosts} />
+          <Route exact path="/all" component={Components.AllPosts} />
           <Route
             exact
             path="/filter/:tags"

@@ -1,7 +1,7 @@
 {
-  "name": "advance-x",
+  "name": "stories-and-strangers",
   "version": "1.0.0",
-  "description": "Share stories from ADVANCE-X!",
+  "description": "Stories, told by strangers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

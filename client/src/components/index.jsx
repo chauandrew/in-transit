@@ -1,7 +1,8 @@
 import Post from './Post'
+import AllPosts from './AllPosts'
 import RecentPosts from './RecentPosts'
 import FilteredPosts from './FilteredPosts'
 
 export {
-    Post, RecentPosts, FilteredPosts
+    Post, AllPosts, RecentPosts, FilteredPosts
 }
