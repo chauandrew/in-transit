@@ -9,10 +9,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.set('port', port);
 
-const reactBuildPath = path.join(__dirname + '/client/build/index.html')
+const reactBuildPath = path.join(__dirname + '/client/dist/index.html')
 
 // Static React Routing
-app.use(express.static(path.join(__dirname, '/client/build')))
+app.use(express.static(path.join(__dirname, '/client/dist')))
 app.get('/', (_, res) => { res.sendFile(reactBuildPath); })
 app.get('/all', (_, res) => { res.sendFile(reactBuildPath); })
 app.get('/filter/*', (_, res) => { res.sendFile(reactBuildPath); })
