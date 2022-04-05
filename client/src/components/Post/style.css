@@ -5,10 +5,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1em;
+    margin-bottom: 0;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.post-img:hover {
+  opacity: 0.4;
+  transition: 0.5s;
 }
 
 .post-tag {
     margin-right: 3px;
     text-decoration: none;
+}
+
+/* Container holding the image and the text */
+.post-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: black;
+  background-clip: content-box;
+  margin-bottom: 1em;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.3em;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  margin-bottom: 0px;
 }
