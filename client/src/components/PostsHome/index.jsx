@@ -39,6 +39,7 @@ const PostsHome = () => {
                     p.push(
                         <Post key={i} author={row[keymap['author']]}
                             bodyText={row[keymap['body']]} 
+                            quote={row[keymap['quote']]}
                             date={row[keymap['createdDate']]}
                             imgUrls={row[keymap['imgUrls']].split(',')}
                             tags={row[keymap['tags']].split(',')} />

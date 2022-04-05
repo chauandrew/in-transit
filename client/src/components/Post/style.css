@@ -7,11 +7,11 @@
     justify-content: center;
     margin-bottom: 0;
     opacity: 0.7;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .post-img:hover {
   opacity: 0.4;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .post-tag {

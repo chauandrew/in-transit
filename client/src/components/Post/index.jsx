@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import "./style.css";
 
-const Post = ({ author, bodyText, date, imgUrls, tags }) => {
+const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
   const [modalShow, setModalShow] = useState(false);
   let tagBadges = [];
   let i = 0;
@@ -28,12 +28,14 @@ const Post = ({ author, bodyText, date, imgUrls, tags }) => {
             ev.preventDefault();
             setModalShow(true);
           }}
+          style={{color: 'inherit'}}
         >
           <img src={imgUrls[0]} className="post-img" alt={author + "-photo"} />
-        </a>
-        <h3 className="centered">{author.toUpperCase()}</h3>
+        
+        <h6 className="centered"><b>{quote.toUpperCase()}</b></h6>
         {/* <p>{date}</p> */}
         <p className="bottom-right">{tagBadges}</p>
+        </a>
       </Col>
       <Modal
         show={modalShow}
@@ -54,6 +56,7 @@ const Post = ({ author, bodyText, date, imgUrls, tags }) => {
 Post.propTypes = {
   author: PropTypes.string.isRequired,
   bodyText: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   imageUrls: PropTypes.array,
   tags: PropTypes.array,
