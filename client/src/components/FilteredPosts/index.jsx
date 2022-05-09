@@ -9,7 +9,7 @@ const FilteredPosts = () => {
   const [posts, setPosts] = useState([]);
   const [displayedPosts, setDisplayedPosts] = useState([]);
   const [pageNum, setPageNum] = useState(0);
-  const pageSize = 6;
+  const pageSize = 9;
 
   const nextPage = () => {
     if ((pageNum + 1) * pageSize < posts.length) {
