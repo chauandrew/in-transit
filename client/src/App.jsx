@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Components.LandingBanner/>
+        <Components.LandingBanner />
         <Switch>
           <Route exact path="/" component={Components.PostsHome} />
           <Route exact path="/all" component={Components.AllPosts} />

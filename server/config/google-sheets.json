@@ -2,7 +2,15 @@
   "Posts": {
     "sheetId": 934823691,
     "spreadsheetId": "1sAaTL0J9-g2fl3Qc_D1zIhULo8JMILKD7T6Tuj6tmj8",
-    "columns": ["id", "author", "body", "quote", "createdDate", "tags", "imgUrls"]
+    "columns": [
+      "id",
+      "author",
+      "body",
+      "quote",
+      "createdDate",
+      "tags",
+      "imgUrls"
+    ]
   },
   "testing": {
     "sheetId": 0,

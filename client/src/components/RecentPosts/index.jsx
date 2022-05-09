@@ -1,50 +1,50 @@
-import {React, useState, useEffect} from 'react';
-import {Container, Row, Col} from 'react-bootstrap'
-import Post from '../Post'
-import api from '../../utils/api'
+import { React, useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import Post from "../Post";
+import api from "../../utils/api";
 
 const RecentPosts = () => {
-    const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([]);
 
-    useEffect(() => {
-        api.getRecentPosts()
-            .then((res) => {
-                console.log(res)
-                let p = []
-                let i = 0
-                let keymap = res.keymap
-                for (const row of res.rows) {
-                    console.log(row)
-                    p.push(
-                        <Post key={i} author={row[keymap['author']]}
-                            bodyText={row[keymap['body']]} 
-                            date={row[keymap['createdDate']]}
-                            imgUrls={row[keymap['imgUrls']].split(',')}
-                            tags={row[keymap['tags']].split(',')} />
-                    )
-                    i++
-                }
-                setPosts(p)
-            })
-    }, [])
+  useEffect(() => {
+    api.getRecentPosts().then((res) => {
+      console.log(res);
+      let p = [];
+      let i = 0;
+      let keymap = res.keymap;
+      for (const row of res.rows) {
+        console.log(row);
+        p.push(
+          <Post
+            key={i}
+            author={row[keymap["author"]]}
+            bodyText={row[keymap["body"]]}
+            date={row[keymap["createdDate"]]}
+            imgUrls={row[keymap["imgUrls"]].split(",")}
+            tags={row[keymap["tags"]].split(",")}
+          />
+        );
+        i++;
+      }
+      setPosts(p);
+    });
+  }, []);
 
-    return (
-        <Container>
-            <Row className="m-3">
-                <Col lg={12} className="text-center">
-                    <h2>Recent Stories:</h2>
-                </Col>
-            </Row>
-            <Row>
-                {posts}
-            </Row>
-            <Row className="m-3">
-                <Col lg={12} className="text-center">
-                    <a href="/all">View More Stories</a>
-                </Col>
-            </Row>
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Row className="m-3">
+        <Col lg={12} className="text-center">
+          <h2>Recent Stories:</h2>
+        </Col>
+      </Row>
+      <Row>{posts}</Row>
+      <Row className="m-3">
+        <Col lg={12} className="text-center">
+          <a href="/all">View More Stories</a>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 export default RecentPosts;
