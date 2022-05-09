@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 
-import { Col, Badge, Modal} from "react-bootstrap";
+import { Col, Badge, Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import "./style.css";
@@ -28,13 +28,14 @@ const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
             ev.preventDefault();
             setModalShow(true);
           }}
-          style={{color: 'inherit'}}
+          style={{ color: "inherit" }}
         >
           <img src={imgUrls[0]} className="post-img" alt={author + "-photo"} />
-        
-        <h6 className="centered"><b>{quote.toUpperCase()}</b></h6>
-        {/* <p>{date}</p> */}
-        <p className="bottom-right">{tagBadges}</p>
+
+          <h6 className="centered">
+            <b>{quote.toUpperCase()}</b>
+          </h6>
+          {/* <p>{date}</p> */}
         </a>
       </Col>
       <Modal
@@ -44,10 +45,13 @@ const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <img src={imgUrls} className="img-fluid" /> 
+        <img src={imgUrls} className="img-fluid" />
         <Modal.Body>
           <p>{bodyText}</p>
-          <h6><i>{author}</i></h6>
+          <h6>
+            <i>{author}</i>
+            <span className="float-right">{tagBadges}</span>
+          </h6>
         </Modal.Body>
       </Modal>
     </>
