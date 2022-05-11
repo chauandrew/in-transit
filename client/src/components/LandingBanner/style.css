@@ -10,9 +10,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  min-height: 100vh;
 }
 
 
 .hero-text {
   color: white;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
 }
