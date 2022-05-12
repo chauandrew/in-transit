@@ -46,5 +46,9 @@
 .closeButton {
   position: absolute;
   right: 10px;
-  top: 5px;
+  top: 10px;
+  border-radius: 15px;
+  background-color: white;
+  padding-right: 3px;
+  padding-left: 3px;
 }
