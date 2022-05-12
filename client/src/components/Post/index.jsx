@@ -32,7 +32,7 @@ const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
         >
           <img src={imgUrls[0]} className="post-img" alt={author + "-photo"} />
 
-          <h6 className="centered">
+          <h6 className="post-quote">
             <b>{quote.toUpperCase()}</b>
           </h6>
           {/* <p>{date}</p> */}
