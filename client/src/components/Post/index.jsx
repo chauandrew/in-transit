@@ -45,6 +45,7 @@ const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
+        <span onClick={()=> setModalShow(false)} className="closeButton close">✕</span>
         <img src={imgUrls} className="img-fluid" />
         <Modal.Body>
           <p>{bodyText}</p>
