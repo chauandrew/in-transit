@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const LandingBanner = () => {
   return (
-    <div className="hero-image mb-5">
+    <div className="hero-image">
       <div className="hero-text pt-5 pb-5">
         <Container className="pt-5">
           <Row>

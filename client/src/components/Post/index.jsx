@@ -5,10 +5,12 @@ import PropTypes from "prop-types";
 
 import "./style.css";
 
-const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
+const Post = ({ author, bodyText, quote, date, imgUrls, tags, md, lg }) => {
   const [modalShow, setModalShow] = useState(false);
   let tagBadges = [];
   let i = 0;
+  if (md === undefined) md = 6; // default md columns to 6
+  if (lg === undefined) lg = 4; // default lg columns to 4
   for (const tag of tags) {
     tagBadges.push(
       <Badge className="post-tag" variant="info" key={i}>
@@ -21,7 +23,7 @@ const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
   }
   return (
     <>
-      <Col className="post-container" sm={12} md={6} lg={4}>
+      <Col className="post-container" sm={12} md={md} lg={lg}>
         <a
           href="#"
           onClick={(ev) => {
@@ -45,7 +47,9 @@ const Post = ({ author, bodyText, quote, date, imgUrls, tags }) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <span onClick={()=> setModalShow(false)} className="closeButton close">✕</span>
+        <span onClick={() => setModalShow(false)} className="closeButton close">
+          ✕
+        </span>
         <img src={imgUrls} className="img-fluid" />
         <Modal.Body>
           <p>{bodyText}</p>
@@ -65,6 +69,8 @@ Post.propTypes = {
   date: PropTypes.string.isRequired,
   imageUrls: PropTypes.array,
   tags: PropTypes.array,
+  md: PropTypes.number,
+  lg: PropTypes.number,
 };
 
 export default Post;

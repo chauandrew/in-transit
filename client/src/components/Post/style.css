@@ -31,8 +31,8 @@
   color: white;
   background-color: black;
   background-clip: content-box;
-  margin-bottom: 1em;
   overflow:hidden;
+  padding: 2px;
 }
 
 .post-quote {
