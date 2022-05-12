@@ -1,7 +1,5 @@
-# Humans Of Boston
+# in:transit
 
-A photojournalism project of college students across Boston.
+A photojournalism project of college students across Boston. Check out the live site [here](https://in-transit.herokuapp.com/)!
 
 Inspired by [Humans of New York](https://www.humansofnewyork.com/)
-
-Run by [@gracepoint.boston](https://www.instagram.com/gracepoint.boston/)
