@@ -22,3 +22,15 @@
   position: absolute;
   width: 100%;
 }
+
+.arrow {
+  opacity: 0.8;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  width: 34px;
+  height: 34px;
+  fill: #fff;
+  border: 2px solid white;
+  border-radius: 100%;
+}
